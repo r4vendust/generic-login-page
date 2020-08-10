@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
+/// A widget to render a rounded input text field
+///
 class RoundedTextField extends StatelessWidget {
+  /// Text prompt before users input some text in the field
   final String labelText;
+
+  /// [Color] of the rounded text field
   final Color color;
+
+  /// Boolean that defines if the input text of the user will be shown
   final bool obscureText;
 
+  /// Default Constructor
   const RoundedTextField({
     Key key,
     this.labelText,

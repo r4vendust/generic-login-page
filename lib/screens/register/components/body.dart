@@ -4,6 +4,15 @@ import 'package:login_page/components/rounded_button.dart';
 import 'package:login_page/components/rounded_textfield.dart';
 import 'package:login_page/components/account_checker.dart';
 
+/// A widget to render the content of the registration page
+///
+/// * [Column] Shows the content
+/// * [Text] Page presentation text
+/// * [RoundedTextField] User input text
+/// * [RoundedButton] Button to peform some action with
+/// * [AccountChecker] A text phrase to gide a navigation to another page
+/// * [Placeholder] Holds some space to images
+/// * [SizedBox] give some margin to the widgetg
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
