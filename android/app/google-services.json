@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "108172410057",
+    "firebase_url": "https://login-page-test-a9582.firebaseio.com",
+    "project_id": "login-page-test-a9582",
+    "storage_bucket": "login-page-test-a9582.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108172410057:android:55dd190a0d24e4dbe22118",
+        "android_client_info": {
+          "package_name": "com.felpsisonfire.login_page"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108172410057-gthf04agmvf1p4nui4m0hp7n82q21p19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChQMJce2EZVWE5QgjPWRZfnQ6K5Gdkr1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108172410057-gthf04agmvf1p4nui4m0hp7n82q21p19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
