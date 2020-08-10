@@ -1,28 +1,33 @@
 import 'package:flutter/material.dart';
 
-class TextFieldRound extends StatelessWidget {
-  @override
+class RoundedTextField extends StatelessWidget {
   final String labelText;
-  final Color color, textColor;
+  final Color color;
   final bool obscureText;
 
-  const TextFieldRound({
+  const RoundedTextField({
     Key key,
     this.labelText,
     this.color,
-    this.textColor,
     this.obscureText,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
+      width: size.width * 0.8,
+      margin: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(29),
+        color: color,
+      ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
         child: TextField(
-          obscureText: obscureText,
           decoration: InputDecoration(
-            labelText: labelText,
+            hintText: labelText,
           ),
+          obscureText: obscureText,
         ),
       ),
     );

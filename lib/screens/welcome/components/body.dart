@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/components/rounded_button.dart';
 import 'package:login_page/screens/login/login_screen.dart';
+import 'package:login_page/screens/register/register_screen.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.all(50.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Peace among worlds",
+            "Welcome",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
@@ -37,7 +37,14 @@ class Body extends StatelessWidget {
             text: "SING UP",
             color: Colors.lightBlue,
             textColor: Colors.black,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return RegisterPage();
+                }),
+              );
+            },
           ),
         ],
       ),

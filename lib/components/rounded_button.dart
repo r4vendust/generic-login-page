@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
-  @override
   final String text;
   final Function press;
   final Color color, textColor;

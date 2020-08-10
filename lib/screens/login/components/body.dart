@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/components/rounded_button.dart';
 import 'package:login_page/components/rounded_textfield.dart';
+import 'package:login_page/components/account_checker.dart';
+import 'package:login_page/screens/register/register_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -13,24 +16,39 @@ class Body extends StatelessWidget {
             "Login",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 15),
           Placeholder(
             color: Colors.blue,
-            fallbackHeight: 400,
+            fallbackHeight: 300,
             fallbackWidth: 150,
           ),
           SizedBox(height: 10),
-          TextFieldRound(
+          RoundedTextField(
             labelText: "Email",
-            color: Colors.blue,
-            textColor: Colors.white,
+            color: Colors.lightBlue,
             obscureText: false,
           ),
-          TextFieldRound(
+          RoundedTextField(
             labelText: "Password",
             color: Colors.lightBlue,
-            textColor: Colors.black,
             obscureText: true,
+          ),
+          RoundedButton(
+            text: "SIGN IN",
+            textColor: Colors.white,
+            press: () {},
+          ),
+          AccountChecker(
+            text: "Doesn't have an account?",
+            link: "Sign Up",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return RegisterPage();
+                }),
+              );
+            },
           ),
         ],
       ),
