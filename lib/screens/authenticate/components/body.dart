@@ -1,7 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:login_page/components/rounded_button.dart';
+import 'package:login_page/components/account_checker.dart';
 import 'package:login_page/screens/login/login_screen.dart';
 import 'package:login_page/screens/register/register_screen.dart';
+import 'package:login_page/services/auth.dart';
 
 /// Widget to render the content of the welcome page
 ///
@@ -11,7 +14,14 @@ import 'package:login_page/screens/register/register_screen.dart';
 /// * [AccountChecker] A text phrase to gide a navigation to another page
 /// * [Placeholder] Holds some space to images
 /// * [SizedBox] give some margin to the widget
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,6 +62,19 @@ class Body extends StatelessWidget {
                   return RegisterPage();
                 }),
               );
+            },
+          ),
+          AccountChecker(
+            text: "Not now?",
+            link: "Sign Up Anonymously",
+            press: () async {
+              dynamic result = await _auth.anon();
+              if (result == null) {
+                print("error");
+              } else {
+                print('sign in');
+                print(result);
+              }
             },
           ),
         ],

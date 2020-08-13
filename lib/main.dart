@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/screens/welcome/welcome_screen.dart';
+import 'package:login_page/components/wrapper.dart';
+import 'package:login_page/services/auth.dart';
+import 'package:login_page/models/user.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Login Page',
-      theme: ThemeData(),
-      home: WelcomePage(),
+    return StreamProvider<User>.value(
+      value: AuthService().user,
+      child: MaterialApp(
+        home: Wrapper(),
+      ),
     );
   }
 }

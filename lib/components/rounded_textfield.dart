@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// A widget to render a rounded input text field
 ///
-class RoundedTextField extends StatelessWidget {
+class RoundedTextField extends StatefulWidget {
   /// Text prompt before users input some text in the field
   final String labelText;
 
@@ -12,30 +12,43 @@ class RoundedTextField extends StatelessWidget {
   /// Boolean that defines if the input text of the user will be shown
   final bool obscureText;
 
+  /// [String] Passed by the user
+  String value;
+
   /// Default Constructor
-  const RoundedTextField({
+  RoundedTextField({
     Key key,
     this.labelText,
     this.color,
     this.obscureText,
+    this.value,
   }) : super(key: key);
 
+  @override
+  _RoundedTextFieldState createState() => _RoundedTextFieldState();
+}
+
+class _RoundedTextFieldState extends State<RoundedTextField> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Container(
       width: size.width * 0.8,
       margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(29),
-        color: color,
+        color: widget.color,
       ),
       child: ClipRRect(
         child: TextField(
           decoration: InputDecoration(
-            hintText: labelText,
+            hintText: widget.labelText,
           ),
-          obscureText: obscureText,
+          obscureText: widget.obscureText,
+          onChanged: (val) {
+            setState(() => widget.value = val);
+          },
         ),
       ),
     );
