@@ -28,67 +28,71 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            "Sign Up",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 10),
-          Placeholder(
-            color: Colors.blue,
-            fallbackHeight: 95,
-            fallbackWidth: 150,
-          ),
-          RoundedTextField(
-            labelText: "First Name",
-            color: Colors.lightBlue,
-            obscureText: false,
-            value: firstName,
-          ),
-          RoundedTextField(
-            labelText: "Last Name",
-            color: Colors.lightBlue,
-            obscureText: false,
-            value: lastName,
-          ),
-          RoundedTextField(
-            labelText: "Email",
-            color: Colors.lightBlue,
-            obscureText: false,
-            value: email,
-          ),
-          RoundedTextField(
-            labelText: "Password",
-            color: Colors.lightBlue,
-            obscureText: true,
-            value: password,
-          ),
-          RoundedTextField(
-            labelText: "Repeat Password",
-            color: Colors.lightBlue,
-            obscureText: true,
-          ),
-          RoundedButton(
-            text: "Create Account",
-            textColor: Colors.white,
-            press: () {},
-          ),
-          AccountChecker(
-            text: "Already have an account?",
-            link: "Sign in",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return LoginPage();
-                }),
-              );
-            },
-          ),
-        ],
+    return Container(
+      margin: const EdgeInsets.fromLTRB(50, 50, 50, 0),
+      child: Form(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Sign Up",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 15),
+            Placeholder(
+              color: Colors.blue,
+              fallbackHeight: 95,
+              fallbackWidth: 150,
+            ),
+            SizedBox(height: 10),
+            RoundedTextField(
+              labelText: "First Name",
+              color: Colors.lightBlue,
+              obscureText: false,
+              value: firstName,
+            ),
+            RoundedTextField(
+              labelText: "Last Name",
+              color: Colors.lightBlue,
+              obscureText: false,
+              value: lastName,
+            ),
+            RoundedTextField(
+              labelText: "Email",
+              color: Colors.lightBlue,
+              obscureText: false,
+              value: email,
+            ),
+            RoundedTextField(
+              labelText: "Password",
+              color: Colors.lightBlue,
+              obscureText: true,
+              value: password,
+            ),
+            RoundedTextField(
+              labelText: "Repeat Password",
+              color: Colors.lightBlue,
+              obscureText: true,
+            ),
+            RoundedButton(
+              text: "Create Account",
+              textColor: Colors.white,
+              press: () {},
+            ),
+            AccountChecker(
+              text: "Already have an account?",
+              link: "Sign in",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return LoginPage();
+                  }),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -24,6 +24,7 @@ class _BodyState extends State<Body> {
 
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -35,7 +36,7 @@ class _BodyState extends State<Body> {
           Placeholder(
             color: Colors.blue,
             fallbackHeight: 300,
-            fallbackWidth: 150,
+            fallbackWidth: 100,
           ),
           SizedBox(height: 10),
           RoundedTextField(

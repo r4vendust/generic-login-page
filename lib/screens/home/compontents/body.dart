@@ -8,7 +8,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(50.0),
+      margin: const EdgeInsets.fromLTRB(40, 50, 30, 0),
       child: Column(
         children: [
           Text("Welcome user"),

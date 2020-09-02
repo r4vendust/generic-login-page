@@ -1,21 +1,26 @@
 # Login Page
 A simple and generic Flutter Sign In and Sign Up page.
 
-# TODO:
-* VALIDATION FORMS
-* REGISTER USER 
-* SIGN IN WITH USER
-
-# Index
+# Getting Started
+Clone the repository to your computer with git clone https://github.com/felpsisonfire/generic-login-page.git navigate to the minimalist-currency-converter directory and do flutter run
 
 # Dependencies
+* Flutter
 
-## Firebase
-* firebase_auth
-* cloud_firestore
+# Usage 
 
-# References and Tutorials
-* [Flutter & Firebase Tutorial Playlist](https://www.youtube.com/watch?v=Wa0rdbb53I8&list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwCa)
+## Welcome Screen
+![Welcome](/assets/welcome.png)
+## Login Screen
+![Login](/assets/login.png)
+## Register Screen
+![Register](/assets/register.png)
+## Home Screen
+![Home](/assets/home.png)
+
+# Contribution 
+
+Check out the [Project Section](https://github.com/felpsisonfire/generic-login-page/projects/1) in order to contribute to this project. 
 
 # Authorship
 This project has made by Felipe Andrade under the MIT License.
