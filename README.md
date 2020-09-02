@@ -1,5 +1,5 @@
 # Login Page
-A simple and generic Flutter Sign In and Sign Up page.
+A simple and generic Flutter login page connected with a firebase server.
 
 # Getting Started
 Clone the repository to your computer with git clone https://github.com/felpsisonfire/generic-login-page.git navigate to the minimalist-currency-converter directory and do flutter run
