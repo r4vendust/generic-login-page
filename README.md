@@ -12,12 +12,11 @@ Clone the repository to your computer with git clone https://github.com/felpsiso
 ## Welcome Screen
 ![Welcome](/assets/welcome.png)
 ## Login Screen
-![Login](/assets/login.png)
+![Login](/assets/login.PNG)
 ## Register Screen
-![Register](/assets/register.png)
+![Register](/assets/register.PNG)
 ## Home Screen
-![Home](/assets/home.png)
-
+![Home](/assets/loged.PNG)
 # Contribution 
 
 Check out the [Project Section](https://github.com/felpsisonfire/generic-login-page/projects/1) in order to contribute to this project. 
