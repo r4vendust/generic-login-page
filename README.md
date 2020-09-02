@@ -10,7 +10,7 @@ Clone the repository to your computer with git clone https://github.com/felpsiso
 # Usage 
 
 ## Welcome Screen
-![Welcome](/assets/welcome.png)
+![Welcome](/assets/welcome.PNG)
 ## Login Screen
 ![Login](/assets/login.PNG)
 ## Register Screen
