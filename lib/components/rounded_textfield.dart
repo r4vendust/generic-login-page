@@ -4,25 +4,24 @@ import 'package:flutter/material.dart';
 ///
 class RoundedTextField extends StatefulWidget {
   /// Text prompt before users input some text in the field
-  final String labelText;
+  String labelText;
 
   /// [Color] of the rounded text field
-  final Color color;
+  Color color;
 
   /// Boolean that defines if the input text of the user will be shown
-  final bool obscureText;
+  bool obscureText;
 
   /// [String] Passed by the user
   String value;
 
   /// Default Constructor
   RoundedTextField({
-    Key key,
     this.labelText,
     this.color,
     this.obscureText,
     this.value,
-  }) : super(key: key);
+  });
 
   @override
   _RoundedTextFieldState createState() => _RoundedTextFieldState();

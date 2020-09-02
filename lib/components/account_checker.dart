@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// A widget to display a message and help navigate through pages
+/// A widget to display a message and toggle between pages
 ///
 /// *[Row] which displays an phrase with some link to another page at the end
 /// *[Text] with the message

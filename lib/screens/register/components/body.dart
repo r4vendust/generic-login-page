@@ -3,6 +3,7 @@ import 'package:login_page/screens/login/login_screen.dart';
 import 'package:login_page/components/rounded_button.dart';
 import 'package:login_page/components/rounded_textfield.dart';
 import 'package:login_page/components/account_checker.dart';
+import 'package:login_page/services/auth.dart';
 
 /// A widget to render the content of the registration page
 ///
@@ -13,12 +14,23 @@ import 'package:login_page/components/account_checker.dart';
 /// * [AccountChecker] A text phrase to gide a navigation to another page
 /// * [Placeholder] Holds some space to images
 /// * [SizedBox] give some margin to the widgetg
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  final AuthService _auth = AuthService();
+  String firstName;
+  String lastName;
+  String email;
+  String password;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(50.0),
+    return Form(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
             "Sign Up",
@@ -34,21 +46,25 @@ class Body extends StatelessWidget {
             labelText: "First Name",
             color: Colors.lightBlue,
             obscureText: false,
+            value: firstName,
           ),
           RoundedTextField(
             labelText: "Last Name",
             color: Colors.lightBlue,
             obscureText: false,
+            value: lastName,
           ),
           RoundedTextField(
             labelText: "Email",
             color: Colors.lightBlue,
             obscureText: false,
+            value: email,
           ),
           RoundedTextField(
             labelText: "Password",
             color: Colors.lightBlue,
             obscureText: true,
+            value: password,
           ),
           RoundedTextField(
             labelText: "Repeat Password",

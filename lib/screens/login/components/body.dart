@@ -3,6 +3,7 @@ import 'package:login_page/components/rounded_button.dart';
 import 'package:login_page/components/rounded_textfield.dart';
 import 'package:login_page/components/account_checker.dart';
 import 'package:login_page/screens/register/register_screen.dart';
+import 'package:login_page/services/auth.dart';
 
 /// A widget to render the content of the login page
 ///
@@ -13,11 +14,16 @@ import 'package:login_page/screens/register/register_screen.dart';
 /// * [AccountChecker] A text phrase to gide a navigation to another page
 /// * [Placeholder] Holds some space to images
 /// * [SizedBox] give some margin to the widgets
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  final AuthService _auth = AuthService();
+
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(50.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -57,6 +63,19 @@ class Body extends StatelessWidget {
                   return RegisterPage();
                 }),
               );
+            },
+          ),
+          AccountChecker(
+            text: "Not now?",
+            link: "Sign Up Anonymously",
+            press: () async {
+              dynamic result = await _auth.anon();
+              if (result == null) {
+                print("error");
+              } else {
+                print('sign in');
+                print(result);
+              }
             },
           ),
         ],

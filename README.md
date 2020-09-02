@@ -1,6 +1,11 @@
 # Login Page
 A simple and generic Flutter Sign In and Sign Up page.
 
+# TODO:
+* VALIDATION FORMS
+* REGISTER USER 
+* SIGN IN WITH USER
+
 # Index
 
 # Dependencies
